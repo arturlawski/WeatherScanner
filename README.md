@@ -6,9 +6,11 @@ This is a simple .NET 9 application that demonstrates the use of **Angular 15** 
 ## Technologies Used
 
 - **.NET 9**: The latest version of the .NET platform.
-- **Entity Framework Core In-Memory Database**: Used for temporary data storage and retrieval during runtime.
-- **OpenWeather API**: Provides real-time weather data based on user input.
+- **Entity Framework Core In-Memory Database 9.0.2**: Used for temporary data storage and retrieval during runtime.
+- **OpenWeather API 2.5**: Provides real-time weather data based on user input.
 - **Angular 15**: Frontend framework
+- **Medaitor 12.4**: Design app framework
+- **Fluent validation 11.11**: Validationm framework
 
 ## Getting Started
 
