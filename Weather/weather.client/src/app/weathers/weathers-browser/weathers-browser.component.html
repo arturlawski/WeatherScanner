@@ -1,0 +1,32 @@
+<div class="content">
+  <mat-table [dataSource]="weathers" class="weathers-table">
+    <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+    <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
+
+    <ng-container matColumnDef="latitude">
+      <th mat-header-cell *matHeaderCellDef>Latitude</th>
+      <td mat-cell *matCellDef="let weather">{{weather.latitude}}</td>
+    </ng-container>
+    <ng-container matColumnDef="longitude">
+      <th mat-header-cell *matHeaderCellDef>Longitude</th>
+      <td mat-cell *matCellDef="let weather">{{weather.longitude}}</td>
+    </ng-container>
+    <ng-container matColumnDef="weatherJson">
+      <th mat-header-cell *matHeaderCellDef>Weather Json</th>
+      <td mat-cell *matCellDef="let weather">{{weather.weatherJson}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let weather">
+        <div class="actions-cell-content">
+          <a class="edit-link" (click)="redirectToEditOrCreate(weather.id)">edit</a>
+          <a class="delete-link" (click)="removeWeather(weather.id)">delete</a>
+        </div>
+      </td>
+    </ng-container>
+  </mat-table>
+  <mat-paginator class="paginator" [length]="totalWeathersCount" [hidePageSize]="true" [pageSize]="pageSize" (page)="onPaginatorClicked($event)"></mat-paginator>
+  <button class="create-button" mat-raised-button color="primary" (click)="redirectToEditOrCreate()">Check weather in new coordinates</button>
+</div>
+

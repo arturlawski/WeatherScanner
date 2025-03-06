@@ -1,0 +1,62 @@
+.weather-table {
+  border-radius: 20px;
+}
+
+/*this would be prettier using less or scss*/
+.weathers-table .mat-column-code,
+.weathers-table .mat-column-name,
+.weathers-table .mat-column-description,
+.weathers-table .mat-column-price {
+  border-right: 1px solid white;
+}
+
+.weathers-table .mat-column-price {
+  min-width: 100px;
+}
+
+.weathers-table .mat-column-price {
+}
+
+.weathers-table td, .weathers-table th {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.weathers-table th {
+  border-bottom: 1px solid white;
+}
+
+.content {
+  padding-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.paginator {
+  width: 100%;
+}
+
+.create-button {
+  margin-top: 2rem;
+}
+
+.actions-cell-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.delete-link {
+  color: #e53434;
+}
+
+.edit-link {
+  color: #15b648;
+}
+
+.delete-link, .edit-link {
+  cursor: pointer;
+}

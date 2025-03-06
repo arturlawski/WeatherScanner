@@ -1,0 +1,20 @@
+<div class="form" [formGroup]="formGroup">
+  <mat-form-field appearance="fill">
+    <mat-label>Longitude</mat-label>
+    <input matInput formControlName="longitude" type="number">
+    <mat-error *ngIf="formGroup.controls.longitude.hasError('required') && showErrors">Required</mat-error>
+    <mat-error *ngIf="formGroup.controls.longitude.hasError('min') && showErrors">Must be greater than or equal to -180</mat-error>
+    <mat-error *ngIf="formGroup.controls.longitude.hasError('max') && showErrors">Must be less than or equal to 180</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Latitude</mat-label>
+    <input matInput formControlName="latitude" type="number">
+    <mat-error *ngIf="formGroup.controls.latitude.hasError('required') && showErrors">Required</mat-error>
+    <mat-error *ngIf="formGroup.controls.latitude.hasError('min') && showErrors">Must be greater than or equal to -90</mat-error>
+    <mat-error *ngIf="formGroup.controls.latitude.hasError('max') && showErrors">Must be less than or equal to 90</mat-error>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="submit()" class="submit-button">Submit</button>
+  <button mat-raised-button color="warn" (click)="redirectToWeathersBrowser()">Back to browser</button>
+</div>

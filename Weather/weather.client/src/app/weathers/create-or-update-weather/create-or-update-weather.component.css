@@ -1,0 +1,21 @@
+.form {
+  padding-top: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+mat-form-field {
+  width: 400px;
+  margin-bottom: 2rem;
+}
+
+button {
+  width: 200px;
+}
+
+.submit-button {
+  margin-bottom: 1rem;
+}
